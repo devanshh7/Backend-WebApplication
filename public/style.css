@@ -1,0 +1,81 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+nav ul {
+    list-style: none;
+    background-color: #1a1a1a;
+    padding: 10px 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #555555;
+}
+
+h1 {
+    color: #333333;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.blinking {
+    color: #28a745;
+    font-weight: bold;
+    margin-left: 20px;
+    animation: blinker 1s linear infinite;
+    position: absolute;
+    right: 10%;
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+ul.user-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+ul.user-list li {
+    background-color: #ffffff;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul.user-list li:nth-child(odd) {
+    background-color: #f9f9f9;
+}

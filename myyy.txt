@@ -1,0 +1,97 @@
+
+
+
+
+
+
+
+
+app.get('/', (req, res) => {
+    res.render('index');
+  });
+  
+  app.get('/home', (req, res) => {
+      res.render('index');
+    });
+  
+  app.get('/signup', (req, res) => {
+      res.render('signup');
+      
+    });
+    
+  
+  app.post('/signup', async (req, res ) => {
+      let {username , email , password , confirmpassword } = req.body ;
+      
+      let createdUser = await userModel.create({
+          password: password,
+          email: email ,
+          username: username,
+          confirmpassword: confirmpassword
+          
+      });
+      res.redirect("/read");
+     /* res.send(`User created ${createdUser}`) */
+  
+  })
+  app.get('/read', async (req,res) => {
+      let allusers  = await userModel.find()
+      res.render("read", {users: allusers , newUserCreated: true });
+     /* res.redirect("/home") */
+      
+  });
+  //app.post('/created', (req, res) => {
+  
+  //})
+   
+    app.get('/contact-us', (req, res) => {
+      res.render('contact');
+    });
+    app.post('/contact-us', (req, res) => {
+      console.log(res)
+    });
+  
+  
+    app.get('/login', (req, res) => {
+      res.render('login', { errorMessage: req.flash('error')});
+    });
+  
+    app.post('/login', async (req, res) => {
+      const { email, password } = req.body;
+      try {
+          const loginuser = await user.findOne({ email });
+          if (!loginuser) {
+              return res.status(400).json({ msg: 'User does not exist' });
+          }
+  
+          const isMatch = await bcrypt.compare(password, loginuser.password);
+          if (!isMatch) {
+              return res.status(400).json({ msg: 'Invalid credentials' });
+          }
+        // Create the payload
+  const payload = {
+      user: {
+          id: user.id
+      }
+  };
+  
+  // Sign the token
+  jwt.sign(
+      payload,
+      process.env.JWT_SECRET,
+      { expiresIn: '1h' },
+      (err, token) => {
+          if (err) throw err;
+          res.json({ token });
+          console.log(token)
+      }
+  );
+  
+  
+      } catch (error) {
+          console.error(error.message);
+          res.status(500).send('Server error');
+      }
+  });
+  
+  

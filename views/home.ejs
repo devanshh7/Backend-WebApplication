@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devansh Sharma's ERP System</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #FFDEE9, #B5FFFC);
+            color: #333;
+        }
+        header {
+            background-color:  #ffb703;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 2.5rem;
+            font-family: 'Dancing Script', cursive;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #24deff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #FF6F61;
+        }
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b9a21791534383.5e341720a5140.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            
+        }
+        .hero h1 {
+            font-size: 4rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .illustrations {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+        .content {
+            text-align: center;
+            padding: 50px;
+        }
+        .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .cta-button {
+            background-color: #FF6F61;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #FF4C39;
+        }
+        footer {
+            background-color: #111439;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Welcome to Devansh Sharma's ERP System
+    </header>
+    
+    <nav>
+        <a href="/">Home</a>
+        <a href="/signup">SignUp</a>
+        <a href="/login">Login</a>
+        <a href="/contact">Contact Us</a>
+    </nav>
+
+    <section class="hero">
+        <div class="illustrations">
+            <img src="/images/doodle.jpg" alt="Doodle">
+        </div>
+        <h1>Streamline Your Business Operations</h1>
+    </section>
+
+    <section class="content">
+        <h2>Why Choose Our ERP System?</h2>
+        <p>
+            Our ERP system is designed to simplify and automate your business processes, ensuring that you can focus on what really matters. With a user-friendly interface and powerful features, it’s the perfect solution for businesses of all sizes.
+        </p>
+        <a href="/signup" class="cta-button">Get Started</a>
+    </section>
+
+    <footer>
+        &copy; 2024 Devansh Sharma's ERP System. All Rights Reserved.
+    </footer>
+</body>
+</html>

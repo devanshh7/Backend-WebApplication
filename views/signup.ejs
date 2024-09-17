@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #F8F8F9; /* Light White Lilac */
+        }
+
+        /* Container for centering the form */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Form and illustration container */
+        .form-container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        /* Form section */
+        .form-section {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Illustration section */
+        .illustration-section {
+            flex: 1;
+            background: url('https://cdni.iconscout.com/illustration/premium/thumb/sign-up-4922762-4097209.png?f=webp') no-repeat center center;
+            background-size: cover;
+            min-height: 400px; /* Adjust based on your image size */
+        }
+
+        /* Heading styles */
+        h1 {
+            text-align: center;
+            color: #111439; /* Dark Blue */
+            margin-bottom: 20px;
+        }
+
+        /* Form group styling */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #111439; /* Dark Blue */
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus {
+            border-color: #957C3D; /* Gold */
+            outline: none;
+        }
+
+        /* Button styling */
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #957C3D; /* Gold */
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #DAA520; /* Rich Gold */
+        }
+
+        button:active {
+            background-color: #B8860B; /* Deep Gold */
+        }
+
+        /* Link styling for admin sign-up */
+        .admin-link {
+            display: block;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .admin-link a {
+            color: #957C3D; /* Gold */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .admin-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-section">
+                <h1>Sign Up</h1>
+                <form action="/signup" method="POST">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirmPassword" required>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                    <div class="admin-link">
+                        <a href="/admin-signup">Sign Up As Admin</a>
+                    </div>
+                </form>
+            </div>
+            <div class="illustration-section">
+                <!-- Illustration is handled by CSS background property -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
